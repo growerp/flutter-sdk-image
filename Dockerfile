@@ -11,4 +11,7 @@ RUN mkdir $FLUTTER_HOME \
     && tar xf flutter_linux_${FLUTTER_VERSION}-stable.tar.xz --strip-components=1 \
     && rm flutter_linux_${FLUTTER_VERSION}-stable.tar.xz
 
+# Install Gcloud
+RUN curl https://sdk.cloud.google.com | bash && exec -l $SHELL
+
 RUN flutter precache
