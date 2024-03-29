@@ -12,9 +12,10 @@ RUN mkdir $FLUTTER_HOME \
     && rm flutter_linux_${FLUTTER_VERSION}-stable.tar.xz
 
 # Install Gcloud
-RUN curl https://sdk.cloud.google.com | bash
-SHELL ["/bin/bash", "-c"]
-RUN mv /root/google-cloud-sdk /usr/local/google-cloud-sdk \
-    && ln -s /usr/local/google-cloud-sdk/bin/gcloud /usr/local/bin/gcloud
+RUN curl https://sdk.cloud.google.com | bash \
+&& export PATH="/home/mobiledevops/google-cloud-sdk/bin:$PATH" && source "${HOME}/.bashrc"
+
+# Install Firebase
+RUN curl -sL firebase.tools | bash 
 
 RUN flutter precache
