@@ -13,9 +13,10 @@ RUN mkdir $FLUTTER_HOME \
 
 RUN flutter precache
 
+USER root
+
 # Install Gcloud
-RUN curl https://sdk.cloud.google.com | bash \
-    && export PATH="$PWD/google-cloud-sdk/bin:$PATH" && source ~/.bashrc
+RUN curl https://sdk.cloud.google.com | bash 
 
 # Install Firebase
 RUN apt-get install -y nodejs
