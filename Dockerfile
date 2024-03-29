@@ -15,6 +15,7 @@ RUN flutter precache
 
 # Install Gcloud
 RUN curl https://sdk.cloud.google.com | bash
+# run "export PATH="/home/mobiledevops/google-cloud-sdk/bin:$PATH" && source ~/.bashrc" after start container to use gcloud command
 
 USER root
 
