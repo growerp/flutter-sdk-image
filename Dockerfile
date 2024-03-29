@@ -19,5 +19,5 @@ USER root
 RUN curl https://sdk.cloud.google.com | bash 
 
 # Install Firebase
-RUN apt-get update && apt-get install -y nodejs
+RUN apt-get update && apt-get install -y nodejs, npm
 RUN npm install -g firebase-tools
