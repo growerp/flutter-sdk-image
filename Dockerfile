@@ -16,8 +16,11 @@ RUN flutter precache
 USER root
 
 # Install Gcloud
-RUN curl https://sdk.cloud.google.com | bash 
+RUN curl https://sdk.cloud.google.com | bash \
+    && export PATH="$PWD/google-cloud-sdk/bin:$PATH" && source ~/.bashrc
 
 # Install Firebase
 RUN apt-get update && apt-get install -y nodejs npm
 RUN npm install -g firebase-tools
+
+USER mobiledevops
