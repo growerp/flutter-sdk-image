@@ -23,4 +23,3 @@ RUN apt-get update && apt-get install -y nodejs npm
 RUN npm install -g firebase-tools
 
 USER mobiledevops
-ENTRYPOINT export PATH="/home/mobiledevops/google-cloud-sdk/bin:$PATH" && source ~/.bashrc
