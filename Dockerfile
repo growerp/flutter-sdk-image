@@ -18,6 +18,5 @@ RUN curl https://sdk.cloud.google.com | bash \
     && export PATH="$PWD/google-cloud-sdk/bin:$PATH" && source ~/.bashrc
 
 # Install Firebase
-RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
 RUN apt-get install -y nodejs
 RUN npm install -g firebase-tools
