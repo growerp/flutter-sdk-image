@@ -6,6 +6,6 @@ Docker image to build a Flutter app `*.apk` for Android. The latest image contai
 
 
 to make a new version:
-    change flutter version in dockerfile
-    make IMAGE_TAG=x.xx.x
+    change flutter version/channel in dockerfile
+    make IMAGE_TAG=x.xx.x[-x.x.pre]
 
