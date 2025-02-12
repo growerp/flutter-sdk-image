@@ -1,9 +1,9 @@
 FROM mobiledevops/android-sdk-image:33.0.2
 
-ENV FLUTTER_VERSION="3.27.0"
+ENV FLUTTER_VERSION="3.27.4"
 ENV CHANNEL="stable"
-ENV FLUTTER_HOME "/home/mobiledevops/.flutter-sdk"
-ENV PATH $PATH:$FLUTTER_HOME/bin
+ENV FLUTTER_HOME="/home/mobiledevops/.flutter-sdk"
+ENV PATH=$PATH:$FLUTTER_HOME/bin
 
 # Download and extract Flutter SDK
 RUN mkdir $FLUTTER_HOME \
