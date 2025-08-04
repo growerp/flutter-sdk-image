@@ -1,6 +1,6 @@
 FROM mobiledevops/android-sdk-image:33.0.2
 
-ENV FLUTTER_VERSION="3.32.7"
+ENV FLUTTER_VERSION="3.32.8"
 ENV CHANNEL="stable"
 ENV FLUTTER_HOME="/home/mobiledevops/.flutter-sdk"
 ENV PATH=$PATH:$FLUTTER_HOME/bin
